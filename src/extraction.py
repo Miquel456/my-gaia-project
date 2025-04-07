@@ -1,18 +1,20 @@
 from astroquery.gaia import Gaia
 import pandas as pd
+import src.transformation as trs
+import sys
 
 def gaia_query(random = False):
 
-    wait_rand = ("Querying Gaia DR3 for 1 million random sources where parallax > 0\n" 
+    wait_rand = ("Querying Gaia DR3 for 500k random sources where parallax > 0\n" 
                 "Wait for the job to finish and get the results...")
-    wait_fixed = ("Querying Gaia DR3 for 1 million fixed sources where parallax > 0\n"
+    wait_fixed = ("Querying Gaia DR3 for 500k fixed sources where parallax > 0\n"
                 "Wait for the job to finish and get the results...")
     
     if random == True:
         print(wait_rand)
         # Gaia DR3 query to get the data for the stars in the Milky Way
         query = ("SELECT "
-                "TOP 1000000 " # Limit the number of sources to 1 million
+                "TOP 500000 " # Limit the number of sources to 1 million
                 "gs.source_id, gs.ref_epoch, gs.ra, gs.dec, gs.parallax, " # Coordinates
                 "ap.classprob_dsc_combmod_quasar, ap.classprob_dsc_combmod_galaxy, ap.classprob_dsc_combmod_star, "
                 "ap.classprob_dsc_combmod_whitedwarf, ap.classprob_dsc_combmod_binarystar, ap.classprob_dsc_specmod_quasar, "
@@ -45,7 +47,7 @@ def gaia_query(random = False):
                 "INNER JOIN gaiadr3.astrophysical_parameters AS ap " # Astrophysical parameters table
                     "ON gs.source_id = ap.source_id "
                 "WHERE gs.parallax IS NOT NULL AND gs.parallax > 0 " # Parallax filter
-                    "AND random_index BETWEEN 0 AND 1000000 " # Fixed sample of sources (Will get the same sources every time)
+                    "AND random_index BETWEEN 0 AND 500000 " # Fixed sample of sources (Will get the same sources every time)
                 )
         name = 'gaia_raw_fixed.csv'
     
@@ -59,3 +61,16 @@ def gaia_query(random = False):
 
     job.get_results().to_pandas().to_csv(full_name, index=False) # Save the results to a csv file
     return name # Return the path of the file created
+
+def answer(file):
+    while True:
+        try:
+            trs.model_file(file)
+            trs.dist_file(file)
+            trs.coord_file(file)
+            trs.grav_file(file)
+            trs.hrd_file(file)
+            break
+        except:
+            sys.exit()
+    return

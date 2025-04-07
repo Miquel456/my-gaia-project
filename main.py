@@ -1,15 +1,5 @@
 import sys
-import src.extraction as exp
-import src.transformation as trs
-import src.visualization as vis
-
-def answer(file):
-    while True:
-        try:
-            trs.coord_file(file)
-            break
-        except:
-            sys.exit()
+import src.extraction as ext
 
 while True:
     try:
@@ -17,14 +7,14 @@ while True:
         if ans == 'n':
             while True:
                 try:
-                    ans1 = input("A million random sources? [y/n]: ").strip().lower()
+                    ans1 = input("A 500k random sources? [y/n]: ").strip().lower()
                     if ans1 == 'n':
-                        file = exp.gaia_query(False)
-                        answer(file)
+                        file = ext.gaia_query(False)
+                        ext.answer(file)
                         break
                     if ans1 == 'y':
-                        file = exp.gaia_query(True)
-                        answer(file)
+                        file = ext.gaia_query(True)
+                        ext.answer(file)
                         break
                     if ans1 == 'exit':
                         print('Going back!')
@@ -38,7 +28,7 @@ while True:
                 try:
                     file_name = input('Write file name of Gaia DR3 data (e.g. gaia_raw.csv): ').strip().lower()
                     try:
-                        answer(file_name)
+                        ext.answer(file_name)
                         break
                     except:
                         print("Wrong path or path not found! (Write 'Ctrl + C' to leave)")
