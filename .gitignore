@@ -1,12 +1,3 @@
 P&R
 test.ipynb
-model_class.csv
-prob_model_dist.png
-distance.csv
-distance_hist.png
-coordinates.csv
-3d_projeccions.png
-gravity.csv
-constant_g.png
-hrd.csv
-hrd_diagram.png
+gaia_raw_random.csv

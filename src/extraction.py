@@ -3,6 +3,9 @@ import pandas as pd
 import src.transformation as trs
 import sys
 
+# ========================================================================
+# SQL GAIA 3DR QUERY
+# ========================================================================
 def gaia_query(random = False):
 
     wait_rand = ("Querying Gaia DR3 for 500k random sources where parallax > 0\n" 
@@ -62,6 +65,9 @@ def gaia_query(random = False):
     job.get_results().to_pandas().to_csv(full_name, index=False) # Save the results to a csv file
     return name # Return the path of the file created
 
+# ========================================================================
+# FILE TYPE
+# ========================================================================
 def answer(file):
     while True:
         try:

@@ -2,6 +2,9 @@ import pandas as pd
 import numpy as np
 import src.visualization as viz
 
+# ========================================================================
+# MODEL PROBABILITIES FILE
+# ========================================================================
 def model_file(file):
     file = str(file)
     data = pd.read_csv(f"data/raw/{file}")
@@ -36,6 +39,9 @@ def model_file(file):
     
     return
 
+# ========================================================================
+# DISTANCE FILE
+# ========================================================================
 def dist_file(file):
     file = str(file)
     data = pd.read_csv(f"data/raw/{file}")
@@ -59,6 +65,9 @@ def dist_file(file):
 
     return
 
+# ========================================================================
+# COORDINATES FILE 
+# ========================================================================
 def coord_file(file):
     file = str(file)
     data = pd.read_csv(f"data/raw/{file}")
@@ -90,6 +99,9 @@ def coord_file(file):
 
     return
 
+# ========================================================================
+# GRAVITY FILE
+# ========================================================================
 def grav_file(file):
     file = str(file)
     data = pd.read_csv(f"data/raw/{file}")
@@ -121,6 +133,9 @@ def grav_file(file):
 
     return
 
+# ========================================================================
+# HR DIAGRAM FILE
+# ========================================================================
 def hrd_file(file):
     file = str(file)
     data = pd.read_csv(f"data/raw/{file}")
