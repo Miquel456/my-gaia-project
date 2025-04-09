@@ -72,7 +72,7 @@ def coord_file(file):
     file = str(file)
     data = pd.read_csv(f"data/raw/{file}")
     # Converting data to pandas DataFrame
-    coords = pd.DataFrame(data[['source_id', 'ra', 'dec', 'parallax']])                                                                                            
+    coords = pd.DataFrame(data[['source_id','ref_epoch','ra', 'dec', 'parallax']])                                                                                            
     coords = coords.dropna() # Drop NaN values from selected columns
     coords['ra'] = np.radians(coords['ra'])   # Degrees to radians
     coords['dec'] = np.radians(coords['dec']) # Degrees to radians
@@ -82,7 +82,7 @@ def coord_file(file):
     coords['coord_z'] = 1000*np.sin(coords['dec'])/coords['parallax']                      # Z coordinate conversion
     coord_index = pd.Series([i for i in range(1,len(coords['source_id'])+1)])
     coords['ID'] = coord_index.values # Index column
-    coords_df = coords[['ID', 'source_id', 'ra', 'dec', 'parallax',    # Order and reselect columns
+    coords_df = coords[['ID', 'source_id','ref_epoch', 'ra', 'dec', 'parallax',    # Order and reselect columns
         'coord_x', 'coord_y', 'coord_z']]
     coords = coords_df # Rename for visualization
 

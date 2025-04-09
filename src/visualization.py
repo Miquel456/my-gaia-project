@@ -115,7 +115,7 @@ def coord_graph(file):
     # 3. Elevation (XZ)
     # ========================
     ax3 = fig.add_subplot(223)
-    ax3.scatter(x, z, c='orange', s=1, alpha=0.5)
+    ax3.scatter(x, z, c='red', s=1, alpha=0.5)
     ax3.set_xlabel('X [pc]')
     ax3.set_ylabel('Z [pc]')
     ax3.set_title("Elevation (Profile XZ)")
@@ -147,8 +147,8 @@ def coord_graph(file):
 def grav_graph(file):
     G = 6.67430e-11  # m³/kg/s²
     gravity = file[file['G_rel_error_percent'] < 5].copy()
-    not_to_rpt_col = {0: 'blue', 1: 'red', 2: 'magenta'}
-    giant_col = {10: 'green', 11: 'orange', 12: 'purple'}
+    not_to_rpt_col = {0: 'blue', 1: 'red', 2: 'green'}
+    giant_col = {10: 'cyan', 11: 'magenta', 12: 'brown'}
     fig, axs = plt.subplots(nrows=1, ncols=2, figsize=(12, 4), sharex=False)
     columns = 0
     for i in range(0, 2):

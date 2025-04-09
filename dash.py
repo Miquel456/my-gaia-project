@@ -7,7 +7,16 @@ import matplotlib.pyplot as plt
 # data = {'Mesos': ['Gener', 'Febrer', 'Març', 'Abril', 'Maig'],
 #         'Vendes': [100, 200, 300, 400, 500]}
 # df = pd.DataFrame(data)
-
+st.markdown(                    # https://htmlcolorcodes.com/
+    """
+    <style>
+    .stApp {
+        background-color: #fcb68e; 
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
 # Títol del dashboard
 st.title('A quick, little view to GAIA DR3')
 
@@ -20,20 +29,29 @@ st.write("Gaia is the mission's name of a European Space Agency (ESA) project to
 st.write("That said, here it is collected some parameters and representation of 289.373 unique sources from Gaia Data Release 3 " \
         "(DR3).")
 
-
 # Filtres interactius
 param = ['None','Distance & coordinates', 'Probability', 'Gravity', 'HD Diagram']
-st.sidebar.header('GRAPHS')
+st.sidebar.header('MENU')
+st.sidebar.subheader('Graph')
 graph = st.sidebar.selectbox('Choose a parameter to analyze:', param)
-if graph == 'None':
-    st.image("images/prob_model_dist.png", caption="Probailites model distribution", use_container_width=True)
-if graph == 'Distance & coordinates':
+if graph == param[0]:
+    st.subheader(f"METHOD")
+    st.image("images/database_relation.png", caption="Connetion between different datasets", use_container_width=True)
+if graph == param[1]:
+    st.subheader(f"{param[1].upper()}")
+    st.write("fjkdsafkasdlkfdslfksdlfs")
     st.image("images/distance_hist.png", caption="Distance Histogram", use_container_width=True)
+    st.write("fjkdsafkasdlkfdslfksdlfs")
     st.image("images/3d_projections.png", caption="3D map and their projections", use_container_width=True)
-if graph == 'Probability':
+if graph == param[2]:
+    st.subheader(f"{param[2].upper()}")
+    st.write("fjkdsafkasdlkfdslfksdlfs")
     st.image("images/prob_model_dist.png", caption="Probailites model distribution", use_container_width=True)
-if graph == 'Gravity':
+if graph == param[3]:
+    st.subheader(f"{param[3].upper()}")
+    st.write("fjkdsafkasdlkfdslfksdlfs")
     st.image("images/constant_g.png", caption="Gravitational constant G best values", use_container_width=True)
-if graph == 'HD Diagram':
+if graph == param[4]:
+    st.subheader(f"{param[4].upper()}")
+    st.write("fjkdsafkasdlkfdslfksdlfs")
     st.image("images/hr_diagram.png", caption="Hertzsprung-Russel diagram", use_container_width=True)
-# st.write(f'Vendes al mes de {month}: {df[df["Mesos"] == month]["Vendes"].values[0]}')
