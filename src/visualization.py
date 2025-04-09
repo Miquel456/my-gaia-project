@@ -215,7 +215,7 @@ def hrd_graph(file):
     plt.legend()
     plt.title("Absolute Magnitude G vs E(GBP-GRP)", fontsize = 12)
     plt.tight_layout()
-    plt.savefig("images/hrd_diagram.png")
+    plt.savefig("images/hr_diagram.png")
     plt.clf()  # Clear the figure after saving
     print('Hertzsprung-Russel diagram generated and saved!')
 
