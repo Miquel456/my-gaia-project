@@ -11,9 +11,13 @@ Using ASTROQUERY API for Python (https://astroquery.readthedocs.io/en/latest/ind
 - Parameters/columns:
 
     • source_id : Unique source identifier (unique within a particular Data Release) (long)
+
     • ref_epoch : Reference epoch (double, Time[Julian Years])
+
     • ra : Right ascension (double, Angle[deg])
+
     • dec : Declination (double, Angle[deg])
+    
     • parallax : Parallax (double, Angle[mas] )
 
 ### TABLE 'astrophysical_parameters':
