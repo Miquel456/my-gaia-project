@@ -2,16 +2,16 @@
 
 ## INTRODUCTION
 
-- This project aims to make a general observation on the data that the European Space Agency's Gaia mission has collected in its third release: Gaia Data Release 3 (DR3).
+This project aims to make a general observation on the data that the European Space Agency's Gaia mission has collected in its third release: Gaia Data Release 3 (DR3).
 
 Using ASTROQUERY API for Python (https://astroquery.readthedocs.io/en/latest/index.html), the program asks a query to two tables from Gaia TAP+ (https://astroquery.readthedocs.io/en/latest/gaia/gaia.html): 'gaia_source' and 'astrophysical_parameters'. NOTE: Look at INSTRUCTIONS part to run the 'main.py' program and Streamlit App 'dash.py' correctly.
 
 ### TABLE 'gaia_source':
 - URL = 'https://gea.esac.esa.int/archive/documentation/GDR3/Gaia_archive/chap_datamodel/sec_dm_main_source_catalogue/ssec_dm_gaia_source.html'
 - Parameters/columns:
-    • source_id : Unique source identifier (unique within a particular Data Release) (long)
-    • ref_epoch : Reference epoch (double, Time[Julian Years])
-    • ra : Right ascension (double, Angle[deg])
+--> source_id : Unique source identifier (unique within a particular Data Release) (long)
+-- ref_epoch : Reference epoch (double, Time[Julian Years])
+• ra : Right ascension (double, Angle[deg])
     • dec : Declination (double, Angle[deg])
     • parallax : Parallax (double, Angle[mas] )
 
@@ -66,14 +66,14 @@ Using ASTROQUERY API for Python (https://astroquery.readthedocs.io/en/latest/ind
 2. Second, run the main program as 'python main.py'.
 3. The next step is answer the questions 'main.py' asks. The first question: "Do you have Gaia DR3 data? [y/n]:" input a 'n' the every first time the program runs. After that, a second question pops up: "A 500k random sources? [y/n]:". Here, it is up to the protagonist to decide which answer ('y'/'n') would want. Mention that for a random sources, the dataset generated will not always be the same, with the exception of a fixed dataset by answering with 'n'.
 4. After these inputs, the program will created a main table with all columns explained above saved as a CSV file named 'gaia_raw_fixed.csv' or 'gaia_raw_random.csv'. Immediately, another 5 tables are generated: 'model_class.csv', 'distance.csv', 'coordinates.csv', 'gravity.csv' and 'hrd.csv'. Once a table is saved, graphs are plotted and saves as: 'prob_model_dist.png', 'distance_hist.png', '3d_projections.png', 'constant_g.png' and 'hr_diagram.png', respectively.
-For fixed results:
+For fixed results, respectively:
 ![image](https://raw.githubusercontent.com/Miquel456/my-gaia-project/refs/heads/main/images/prob_model_dist.png?token=GHSAT0AAAAAADBZ6URH6MTHJ74T6JUMF6L4Z7ZDK2Q)
 ![image](https://raw.githubusercontent.com/Miquel456/my-gaia-project/refs/heads/main/images/distance_hist.png?token=GHSAT0AAAAAADBZ6URG5FLRL73L7QM3XGGMZ7ZDLEA)
 ![image](https://raw.githubusercontent.com/Miquel456/my-gaia-project/refs/heads/main/images/3d_projections.png?token=GHSAT0AAAAAADBZ6URGONGBFKOXZBTEAD66Z7ZDLNQ)
 ![image](https://raw.githubusercontent.com/Miquel456/my-gaia-project/refs/heads/main/images/constant_g.png?token=GHSAT0AAAAAADBZ6URG5IXV5MWUDIDOEJW2Z7ZDLXA)
 ![image](https://raw.githubusercontent.com/Miquel456/my-gaia-project/refs/heads/main/images/hr_diagram.png?token=GHSAT0AAAAAADBZ6URHMRJE6MUJMPDI22Z4Z7ZDMAA)
 The relation between tables are represented in 'database_relation.png' in 'images' carpet.
-![image](https://raw.githubusercontent.com/Miquel456/my-gaia-project/refs/heads/main/images/database_relation.png?token=GHSAT0AAAAAADBZ6URH7R3IHN47NBHDM4SWZ7ZDHDQ)
+![image](https://raw.githubusercontent.com/Miquel456/my-gaia-project/refs/heads/main/images/database_relation.png?token=GHSAT0AAAAAADBZ6URG3BKXISINORVPICWEZ7ZDPIQ)
 5. Once every file and every plot is saved, the program returns to the first question. Input 'exit' to close the program. NOTE: generating another dataset rewrites the previous results, losing them.
 6. Now, it is time to visualize the results. In the terminal, write 'streamlit run dash.py'. It will redirect to an interactive Internet page. NOTE: make sure to have Internet connection. Otherwise, background images will not show.
 7. Feel free to explore! On the sidebar (left) there is an option to choose the different results.
