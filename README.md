@@ -17,7 +17,7 @@ Using ASTROQUERY API for Python (https://astroquery.readthedocs.io/en/latest/ind
     • ra : Right ascension (double, Angle[deg])
 
     • dec : Declination (double, Angle[deg])
-    
+
     • parallax : Parallax (double, Angle[mas] )
 
 ### TABLE 'astrophysical_parameters':
@@ -25,27 +25,49 @@ Using ASTROQUERY API for Python (https://astroquery.readthedocs.io/en/latest/ind
 - Parameters/columns:
 
     • source_id : Source Identifier (long)
+
     • classprob_dsc_combmod_quasar : Probability from DSC-Combmod of being a quasar (data used: BP/RP spectrum, photometry, astrometry) (float)
+
     • classprob_dsc_combmod_galaxy : Probability from DSC-Combmod of being a galaxy (data used: BP/RP spectrum, photometry, astrometry) (float)
+
     • classprob_dsc_combmod_star : Probability from DSC-Combmod of being a single star (but not a white dwarf) (data used: BP/RP spectrum, photometry, astrometry) (float)
+
     • classprob_dsc_combmod_whitedwarf : Probability from DSC-Combmod of being a white dwarf (data used: BP/RP spectrum, photometry, astrometry) (float)
+
     • classprob_dsc_combmod_binarystar : Probability from DSC-Combmod of being a binary star (data used: BP/RP spectrum, photometry, astrometry) (float)
+
     • classprob_dsc_specmod_quasar : Probability from DSC-Specmod of being a quasar (data used: BP/RP spectrum) (float)
+
     • classprob_dsc_specmod_galaxy : Probability from DSC-Specmod of being a galaxy (data used: BP/RP spectrum) (float)
+
     • classprob_dsc_specmod_star : Probability from DSC-Specmod of being a single star (but not a white dwarf) (data used: BP/RP spectrum) (float)
+
     • classprob_dsc_specmod_whitedwarf : Probability from DSC-Specmod of being a white dwarf (data used: BP/RP spectrum) (float)
+
     • classprob_dsc_specmod_binarystar : Probability from DSC-Specmod of being a binary star (data used: BP/RP spectrum) (float)
+
     • classprob_dsc_allosmod_quasar : Probability from DSC-Allosmod of being a quasar (data used: photometry, astrometry) (float)
+
     • classprob_dsc_allosmod_galaxy : Probability from DSC-Allosmod of being a galaxy (data used: photometry, astrometry) (float)
+
     • classprob_dsc_allosmod_star : Probability from DSC-Allosmod of being a star (data used: photometry, astrometry) (float)
+
     • teff_gspphot : Effective temperature from GSP-Phot Aeneas best library using BP/RP spectra (float, Temperature[K])
+
     • logg_gspphot : Surface gravity from GSP-Phot Aeneas best library using BP/RP spectra (float, GravitySurface[log cgs])
+
     • distance_gspphot : Distance from GSP-Phot Aeneas best library using BP/RP spectra (float, Length & Distance[pc])
+
     • ebpminrp_gspphot : Reddening E(GBP−GRP) from GSP-Phot Aeneas best library using BP/RP spectra (float, Magnitude[mag])
+
     • mg_gspphot : Absolute magnitude MG from GSP-Phot Aeneas best library using BP/RP spectra (float, Magnitude[mag])
+
     • lum_flame : Luminosity of the star from FLAME using G band magnitude, extinction (ag_gspphot), parallax or distance, and a bolometric correction bc_flame (float, Luminosity[Solar Luminosity])
+
     • radius_flame : Radius of the star from FLAME using teff_gspphot and lum_flame (float, Length & Distance[Solar Radius])
+
     • mass_flame : Mass of the star from FLAME using stellar models, lum_flame, and teff_gspphot (float, Mass[Solar Mass])
+
     • flags_flame : Flags indicating quality and processing information from FLAME (string)
 
 ## HYPOTHESIS
@@ -73,13 +95,21 @@ Using ASTROQUERY API for Python (https://astroquery.readthedocs.io/en/latest/ind
 3. The next step is answer the questions 'main.py' asks. The first question: "Do you have Gaia DR3 data? [y/n]:" input a 'n' the every first time the program runs. After that, a second question pops up: "A 500k random sources? [y/n]:". Here, it is up to the protagonist to decide which answer ('y'/'n') would want. Mention that for a random sources, the dataset generated will not always be the same, with the exception of a fixed dataset by answering with 'n'.
 4. After these inputs, the program will created a main table with all columns explained above saved as a CSV file named 'gaia_raw_fixed.csv' or 'gaia_raw_random.csv'. Immediately, another 5 tables are generated: 'model_class.csv', 'distance.csv', 'coordinates.csv', 'gravity.csv' and 'hrd.csv'. Once a table is saved, graphs are plotted and saves as: 'prob_model_dist.png', 'distance_hist.png', '3d_projections.png', 'constant_g.png' and 'hr_diagram.png', respectively.
 For fixed results, respectively:
+
 ![image](https://raw.githubusercontent.com/Miquel456/my-gaia-project/refs/heads/main/images/prob_model_dist.png?token=GHSAT0AAAAAADBZ6URH6MTHJ74T6JUMF6L4Z7ZDK2Q)
+
 ![image](https://raw.githubusercontent.com/Miquel456/my-gaia-project/refs/heads/main/images/distance_hist.png?token=GHSAT0AAAAAADBZ6URG5FLRL73L7QM3XGGMZ7ZDLEA)
+
 ![image](https://raw.githubusercontent.com/Miquel456/my-gaia-project/refs/heads/main/images/3d_projections.png?token=GHSAT0AAAAAADBZ6URGONGBFKOXZBTEAD66Z7ZDLNQ)
+
 ![image](https://raw.githubusercontent.com/Miquel456/my-gaia-project/refs/heads/main/images/constant_g.png?token=GHSAT0AAAAAADBZ6URG5IXV5MWUDIDOEJW2Z7ZDLXA)
+
 ![image](https://raw.githubusercontent.com/Miquel456/my-gaia-project/refs/heads/main/images/hr_diagram.png?token=GHSAT0AAAAAADBZ6URHMRJE6MUJMPDI22Z4Z7ZDMAA)
+
 The relation between tables are represented in 'database_relation.png' in 'images' carpet.
+
 ![image](https://raw.githubusercontent.com/Miquel456/my-gaia-project/refs/heads/main/images/database_relation.png?token=GHSAT0AAAAAADBZ6URG3BKXISINORVPICWEZ7ZDPIQ)
+
 5. Once every file and every plot is saved, the program returns to the first question. Input 'exit' to close the program. NOTE: generating another dataset rewrites the previous results, losing them.
 6. Now, it is time to visualize the results. In the terminal, write 'streamlit run dash.py'. It will redirect to an interactive Internet page. NOTE: make sure to have Internet connection. Otherwise, background images will not show.
 7. Feel free to explore! On the sidebar (left) there is an option to choose the different results.
