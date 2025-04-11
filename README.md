@@ -96,15 +96,15 @@ Using ASTROQUERY API for Python (https://astroquery.readthedocs.io/en/latest/ind
 4. After these inputs, the program will created a main table with all columns explained above saved as a CSV file named 'gaia_raw_fixed.csv' or 'gaia_raw_random.csv'. Immediately, another 5 tables are generated: 'model_class.csv', 'distance.csv', 'coordinates.csv', 'gravity.csv' and 'hrd.csv'. Once a table is saved, graphs are plotted and saves as: 'prob_model_dist.png', 'distance_hist.png', '3d_projections.png', 'constant_g.png' and 'hr_diagram.png', respectively.
 For fixed results, respectively:
 
-![image](https://raw.githubusercontent.com/Miquel456/my-gaia-project/refs/heads/main/images/prob_model_dist.png?token=GHSAT0AAAAAADBZ6URH6MTHJ74T6JUMF6L4Z7ZDK2Q)
+![image](https://raw.githubusercontent.com/Miquel456/my-gaia-project/refs/heads/main/images/prob_model_dist.png?token=GHSAT0AAAAAADBZ6URGYBH5MELA4MDDOVV4Z7ZDW6Q)
 
-![image](https://raw.githubusercontent.com/Miquel456/my-gaia-project/refs/heads/main/images/distance_hist.png?token=GHSAT0AAAAAADBZ6URG5FLRL73L7QM3XGGMZ7ZDLEA)
+![image](https://raw.githubusercontent.com/Miquel456/my-gaia-project/refs/heads/main/images/distance_hist.png?token=GHSAT0AAAAAADBZ6URGQHC2VIGDT6ZY6DPKZ7ZDWWQ)
 
-![image](https://raw.githubusercontent.com/Miquel456/my-gaia-project/refs/heads/main/images/3d_projections.png?token=GHSAT0AAAAAADBZ6URGONGBFKOXZBTEAD66Z7ZDLNQ)
+![image](https://raw.githubusercontent.com/Miquel456/my-gaia-project/refs/heads/main/images/3d_projections.png?token=GHSAT0AAAAAADBZ6URHJWDWNXBRCNO5MY7OZ7ZDWMQ)
 
-![image](https://raw.githubusercontent.com/Miquel456/my-gaia-project/refs/heads/main/images/constant_g.png?token=GHSAT0AAAAAADBZ6URG5IXV5MWUDIDOEJW2Z7ZDLXA)
+![image](https://raw.githubusercontent.com/Miquel456/my-gaia-project/refs/heads/main/images/constant_g.png?token=GHSAT0AAAAAADBZ6URGIKR32JVLBDCPPLCWZ7ZDWAA)
 
-![image](https://raw.githubusercontent.com/Miquel456/my-gaia-project/refs/heads/main/images/hr_diagram.png?token=GHSAT0AAAAAADBZ6URHMRJE6MUJMPDI22Z4Z7ZDMAA)
+![image](https://raw.githubusercontent.com/Miquel456/my-gaia-project/refs/heads/main/images/hr_diagram.png?token=GHSAT0AAAAAADBZ6URHLT4LIGUQELMRF5MWZ7ZDVWA)
 
 The relation between tables are represented in 'database_relation.png' in 'images' carpet.
 
@@ -118,7 +118,8 @@ The relation between tables are represented in 'database_relation.png' in 'image
 
 
 ## REFERENCES
-• Gaia Collaboration et al. (2016b): The Gaia mission (provides a description of the Gaia mission including spacecraft, instruments, survey and measurement principles, and operations);
+• Gaia Collaboration et al. (2016b): The Gaia mission (provides a description of the Gaia mission including spacecraft, instruments, survey and measurement principles, and operations)
+
 • Gaia Collaboration et al. (2023j): Gaia DR3: Summary of the contents and survey properties.
 
 This work has made use of data from the European Space Agency (ESA) mission Gaia (https://www.cosmos.esa.int/gaia), processed by the Gaia Data Processing and Analysis Consortium (DPAC, https://www.cosmos.esa.int/web/gaia/dpac/consortium). Funding for the DPAC has been provided by national institutions, in particular the institutions participating in the Gaia Multilateral Agreement.
