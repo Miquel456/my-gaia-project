@@ -97,19 +97,19 @@ Using ASTROQUERY API for Python (https://astroquery.readthedocs.io/en/latest/ind
 
 For fixed results, respectively:
 
-![image](https://raw.githubusercontent.com/Miquel456/my-gaia-project/refs/heads/main/images/prob_model_dist.png?token=GHSAT0AAAAAADBZ6URGYBH5MELA4MDDOVV4Z7ZDW6Q)
+![image](https://github.com/Miquel456/my-gaia-project/blob/main/images/prob_model_dist.png?raw=true)
 
-![image](https://raw.githubusercontent.com/Miquel456/my-gaia-project/refs/heads/main/images/distance_hist.png?token=GHSAT0AAAAAADBZ6URGQHC2VIGDT6ZY6DPKZ7ZDWWQ)
+![image](https://github.com/Miquel456/my-gaia-project/blob/main/images/distance_hist.png?raw=true)
 
-![image](https://raw.githubusercontent.com/Miquel456/my-gaia-project/refs/heads/main/images/3d_projections.png?token=GHSAT0AAAAAADBZ6URHJWDWNXBRCNO5MY7OZ7ZDWMQ)
+![image](https://github.com/Miquel456/my-gaia-project/blob/main/images/3d_projections.png?raw=true)
 
-![image](https://raw.githubusercontent.com/Miquel456/my-gaia-project/refs/heads/main/images/constant_g.png?token=GHSAT0AAAAAADBZ6URGIKR32JVLBDCPPLCWZ7ZDWAA)
+![image](https://github.com/Miquel456/my-gaia-project/blob/main/images/constant_g.png?raw=true)
 
-![image](https://raw.githubusercontent.com/Miquel456/my-gaia-project/refs/heads/main/images/hr_diagram.png?token=GHSAT0AAAAAADBZ6URHLT4LIGUQELMRF5MWZ7ZDVWA)
+![image](https://github.com/Miquel456/my-gaia-project/blob/main/images/hr_diagram.png?raw=true)
 
 The relation between tables are represented in 'database_relation.png' in 'images' carpet.
 
-![image](https://raw.githubusercontent.com/Miquel456/my-gaia-project/refs/heads/main/images/database_relation.png?token=GHSAT0AAAAAADBZ6URG3BKXISINORVPICWEZ7ZDPIQ)
+![image](https://github.com/Miquel456/my-gaia-project/blob/main/images/database_relation.png?raw=true)
 
 5. Once every file and every plot is saved, the program returns to the first question. Input 'exit' to close the program. NOTE: generating another dataset rewrites the previous results, losing them.
 6. Now, it is time to visualize the results. In the terminal, write 'streamlit run dash.py'. It will redirect to an interactive Internet page. NOTE: make sure to have Internet connection. Otherwise, background images will not show.
