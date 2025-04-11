@@ -10,18 +10,16 @@ Using ASTROQUERY API for Python (https://astroquery.readthedocs.io/en/latest/ind
 - URL = 'https://gea.esac.esa.int/archive/documentation/GDR3/Gaia_archive/chap_datamodel/sec_dm_main_source_catalogue/ssec_dm_gaia_source.html'
 - Parameters/columns:
 
---> source_id : Unique source identifier (unique within a particular Data Release) (long)
-
--- ref_epoch : Reference epoch (double, Time[Julian Years])
-
-• ra : Right ascension (double, Angle[deg])
-
+    • source_id : Unique source identifier (unique within a particular Data Release) (long)
+    • ref_epoch : Reference epoch (double, Time[Julian Years])
+    • ra : Right ascension (double, Angle[deg])
     • dec : Declination (double, Angle[deg])
     • parallax : Parallax (double, Angle[mas] )
 
 ### TABLE 'astrophysical_parameters':
 - URL = 'https://gea.esac.esa.int/archive/documentation/GDR3/Gaia_archive/chap_datamodel/sec_dm_astrophysical_parameter_tables/ssec_dm_astrophysical_parameters.html'
 - Parameters/columns:
+
     • source_id : Source Identifier (long)
     • classprob_dsc_combmod_quasar : Probability from DSC-Combmod of being a quasar (data used: BP/RP spectrum, photometry, astrometry) (float)
     • classprob_dsc_combmod_galaxy : Probability from DSC-Combmod of being a galaxy (data used: BP/RP spectrum, photometry, astrometry) (float)
