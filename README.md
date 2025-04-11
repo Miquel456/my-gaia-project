@@ -9,9 +9,13 @@ Using ASTROQUERY API for Python (https://astroquery.readthedocs.io/en/latest/ind
 ### TABLE 'gaia_source':
 - URL = 'https://gea.esac.esa.int/archive/documentation/GDR3/Gaia_archive/chap_datamodel/sec_dm_main_source_catalogue/ssec_dm_gaia_source.html'
 - Parameters/columns:
+
 --> source_id : Unique source identifier (unique within a particular Data Release) (long)
+
 -- ref_epoch : Reference epoch (double, Time[Julian Years])
+
 • ra : Right ascension (double, Angle[deg])
+
     • dec : Declination (double, Angle[deg])
     • parallax : Parallax (double, Angle[mas] )
 
