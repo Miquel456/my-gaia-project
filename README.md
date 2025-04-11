@@ -94,6 +94,7 @@ Using ASTROQUERY API for Python (https://astroquery.readthedocs.io/en/latest/ind
 2. Second, run the main program as 'python main.py'.
 3. The next step is answer the questions 'main.py' asks. The first question: "Do you have Gaia DR3 data? [y/n]:" input a 'n' the every first time the program runs. After that, a second question pops up: "A 500k random sources? [y/n]:". Here, it is up to the protagonist to decide which answer ('y'/'n') would want. Mention that for a random sources, the dataset generated will not always be the same, with the exception of a fixed dataset by answering with 'n'.
 4. After these inputs, the program will created a main table with all columns explained above saved as a CSV file named 'gaia_raw_fixed.csv' or 'gaia_raw_random.csv'. Immediately, another 5 tables are generated: 'model_class.csv', 'distance.csv', 'coordinates.csv', 'gravity.csv' and 'hrd.csv'. Once a table is saved, graphs are plotted and saves as: 'prob_model_dist.png', 'distance_hist.png', '3d_projections.png', 'constant_g.png' and 'hr_diagram.png', respectively.
+
 For fixed results, respectively:
 
 ![image](https://raw.githubusercontent.com/Miquel456/my-gaia-project/refs/heads/main/images/prob_model_dist.png?token=GHSAT0AAAAAADBZ6URGYBH5MELA4MDDOVV4Z7ZDW6Q)
